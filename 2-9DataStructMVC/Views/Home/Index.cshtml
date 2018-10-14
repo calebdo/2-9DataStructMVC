@@ -1,0 +1,16 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+
+
+
+<div class="center">
+    <h2>Welcome to the Data Center</h2><br />
+    <h3>Please select a menu option:</h3>
+
+    <a href=@Url.Action("Index", "Stack") class="w3-bar-item-w3-button">1. Stack</a><br />
+    <a href=@Url.Action("Index", "Queue") class="w3-bar-item-w3-button">2. Queue</a><br />
+    <a href=@Url.Action("Index", "Dictionary") class="w3-bar-item-w3-button">3. Dictionary</a><br />
+    <a href=@Url.Action("Exit", "Home") class="w3-bar-item-w3-button">4. Exit</a><br />
+</div>

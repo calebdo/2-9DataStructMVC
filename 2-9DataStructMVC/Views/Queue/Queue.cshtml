@@ -1,0 +1,79 @@
+﻿
+@{
+    ViewBag.Title = "Queue";
+}
+
+<h2>Queue</h2>
+
+<!-- Sidebar-->
+<div class="w3-sidebar w3-light-grey w3-bar-block" style="width:25%">
+    <h3 class="w3-bar-item">Menu</h3>
+    <a href=@Url.Action("Add", "Queue") class="w3-bar-item-w3-button">1. Add one time to queue</a><br />
+    <a href=@Url.Action("AddList", "Queue") class="w3-bar-item-w3-button">2. Add huge list of items to queue</a><br />
+    <a href=@Url.Action("Display", "Queue") class="w3-bar-item-w3-button">3. Display queue</a><br />
+    <a href=@Url.Action("Delete", "Queue") class="w3-bar-item-w3-button">4. Delete from queue</a><br />
+    <a href=@Url.Action("Clear", "Queue") class="w3-bar-item-w3-button">5. Clear queue</a><br />
+    <a href=@Url.Action("Search", "Queue") class="w3-bar-item-w3-button">6. Search queue</a><br />
+    <a href=@Url.Action("Index", "Home") class="w3-bar-item-w3-button">7. Return to Main Menu</a><br />
+
+</div> 
+
+<!-- Page Content -->
+<div style="margin-left:25%">
+
+    <div class="w3-container w3-teal">
+        <h1>Results</h1>
+    </div>
+
+    <img src="~/Graphics/line.jpg" alt="Line" style="width:50%">
+
+    <div class="w3-container">
+
+        @if (ViewBag.MyQueue != null) //add one item
+        {
+            <p>@ViewBag.MyQueue</p>
+
+        }
+
+        @if (ViewBag.MyDisplayQueue != null) //display Queue
+        {
+            foreach (var sData in ViewBag.MyDisplayQueue)
+
+            {
+                <p>@sData</p>
+            }
+
+        }
+
+        @if (ViewBag.MyFatQueue != null) //add 2000 items
+        {
+            <p>@ViewBag.MyFatQueue</p>
+        }
+
+        @if (ViewBag.MyClearQueue != null) //clear Queue
+        {
+            <p>@ViewBag.MyClearQueue</p>
+        }
+
+
+        @if (ViewBag.MyDeleteQueue != null) //delete top item off Queue
+        {
+            <p>@ViewBag.MyDeleteQueue</p>
+        }
+
+        @if (ViewBag.MySearchQueue != null) //search for New entry #3 in Queue
+        {
+            if (ViewBag.MySearchQueue == "New entry #3 found")
+            {
+                <p>@ViewBag.MySearchQueue in @ViewBag.StopWatchQueue</p>
+            }
+            else
+            {
+                <p>@ViewBag.MySearchQueue</p>
+            }
+
+        }
+
+    </div>
+
+</div>
