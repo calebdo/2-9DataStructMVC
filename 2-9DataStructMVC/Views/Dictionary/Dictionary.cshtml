@@ -3,11 +3,10 @@
     ViewBag.Title = "Dictionary";
 }
 
-<h2>Dictionary</h2>
 
 <!-- Sidebar-->
 <div class="w3-sidebar w3-light-grey w3-bar-block" style="width:25%">
-    <h3 class="w3-bar-item">Menu</h3>
+    <h3 class="w3-bar-item">Discionary Menu</h3>
     <a href=@Url.Action("Add", "Dictionary") class="w3-bar-item-w3-button">1. Add one time to dictionary</a><br />
     <a href=@Url.Action("AddList", "Dictionary") class="w3-bar-item-w3-button">2. Add huge list of items to dictionary</a><br />
     <a href=@Url.Action("Display", "Dictionary") class="w3-bar-item-w3-button">3. Display dictionary</a><br />
@@ -65,7 +64,7 @@
         {
             if (ViewBag.MySearchDict == "New entry #3 found")
             {
-                <p>@ViewBag.MySearchDict in @ViewBag.StopWatchDict</p>
+            <p>@ViewBag.MySearchDict in @ViewBag.StopWatchDict seconds</p>
             }
             else
             {

@@ -3,11 +3,10 @@
     ViewBag.Title = "Queue";
 }
 
-<h2>Queue</h2>
 
 <!-- Sidebar-->
 <div class="w3-sidebar w3-light-grey w3-bar-block" style="width:25%">
-    <h3 class="w3-bar-item">Menu</h3>
+    <h3 class="w3-bar-item">Queue Menu</h3>
     <a href=@Url.Action("Add", "Queue") class="w3-bar-item-w3-button">1. Add one time to queue</a><br />
     <a href=@Url.Action("AddList", "Queue") class="w3-bar-item-w3-button">2. Add huge list of items to queue</a><br />
     <a href=@Url.Action("Display", "Queue") class="w3-bar-item-w3-button">3. Display queue</a><br />
@@ -65,7 +64,7 @@
         {
             if (ViewBag.MySearchQueue == "New entry #3 found")
             {
-                <p>@ViewBag.MySearchQueue in @ViewBag.StopWatchQueue</p>
+            <p>@ViewBag.MySearchQueue in @ViewBag.StopWatchQueue seconds</p>
             }
             else
             {

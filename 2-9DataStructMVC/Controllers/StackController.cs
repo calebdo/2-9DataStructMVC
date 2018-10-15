@@ -101,7 +101,7 @@ namespace _2_9DataStructMVC.Controllers
 
                 TimeSpan ts = sw.Elapsed;
 
-                ViewBag.StopWatch = ts;
+                ViewBag.StopWatchStack = ts;
             }
             else
             {

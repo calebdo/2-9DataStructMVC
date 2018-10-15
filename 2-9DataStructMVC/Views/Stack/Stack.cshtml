@@ -3,13 +3,12 @@
     ViewBag.Title = "Stack";
 }
 
-<h2>Stack</h2>
 
 
 
 <!-- Sidebar-->
 <div class="w3-sidebar w3-light-grey w3-bar-block" style="width:25%">
-    <h3 class="w3-bar-item">Menu</h3>
+    <h3 class="w3-bar-item">Stack Menu</h3>
     <a href=@Url.Action("Add", "Stack") class="w3-bar-item-w3-button">1. Add one time to stack</a><br />
     <a href=@Url.Action("AddList", "Stack") class="w3-bar-item-w3-button">2. Add huge list of items to stack</a><br />
     <a href=@Url.Action("Display", "Stack") class="w3-bar-item-w3-button">3. Display stack</a><br />
@@ -68,7 +67,7 @@
         {
             if (ViewBag.MySearchStack == "New entry #3 found")
             {
-                <p>@ViewBag.MySearchStack in @ViewBag.StopWatchStack</p>
+                <p>@ViewBag.MySearchStack in @ViewBag.StopWatchStack seconds</p>
             }
             else
             {
